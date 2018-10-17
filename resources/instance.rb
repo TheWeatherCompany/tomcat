@@ -8,9 +8,9 @@ attribute :name,
   required: true,
   name_attribute: true
 attribute :port,
-  kind_of: Fixnum
+  kind_of: Integer
 attribute :proxy_port,
-  kind_of: Fixnum
+  kind_of: Integer
 attribute :proxy_name,
   kind_of: String
 attribute :secure,
@@ -22,18 +22,18 @@ attribute :scheme,
 attribute :uriencoding,
   kind_of: String
 attribute :ssl_port,
-  kind_of: Fixnum
+  kind_of: Integer
 attribute :ssl_proxy_port,
-  kind_of: Fixnum
+  kind_of: Integer
 attribute :ajp_port,
-  kind_of: Fixnum
+  kind_of: Integer
 attribute :ajp_listen_ip,
   kind_of: String
 attribute :shutdown_port,
-  kind_of: Fixnum,
+  kind_of: Integer,
   required: true
 attribute :ajp_redirect_port,
-  kind_of: Fixnum
+  kind_of: Integer
 
 # The rest will inherit from node attributes
 attribute :config_dir,
@@ -57,9 +57,9 @@ attribute :authbind,
   kind_of: String,
   equal_to: %w(yes no)
 attribute :max_threads,
-  kind_of: Fixnum
+  kind_of: Integer
 attribute :ssl_max_threads,
-  kind_of: Fixnum
+  kind_of: Integer
 attribute :ssl_cert_file,
   kind_of: String
 attribute :ssl_key_file,

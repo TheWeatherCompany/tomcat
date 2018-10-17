@@ -52,8 +52,8 @@ unless node['tomcat']['deploy_manager_apps']
   end
 end
 
-node.set_unless['tomcat']['keystore_password'] = secure_password
-node.set_unless['tomcat']['truststore_password'] = secure_password
+node.default_unless['tomcat']['keystore_password'] = secure_password
+node.default_unless['tomcat']['truststore_password'] = secure_password
 
 def create_service(instance)
   service instance do
